@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(39, 27, 83);
+    color: white; /* valkoinen teksti selkeämmän näkyvyyden luomiseksi */
+}
+
+.container { /* keskelle sivua*/
+    max-width: 600px;
+    margin: 20px auto; 
+    padding: 0 20px;
+}
+
+.error {
+    color: red; /* punainen väri virheviestille */
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    color: white; /* valkoinen teksti selkeämmän näkyvyyden luomiseksi */
+}
+
+.todo-item.done {
+    text-decoration: line-through; /* viiva niiden tehtävien päälle jotka merkitty tehdyksi */
+    text-decoration-thickness: 2px;
+}
+
+.todo-item button {
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.todo-item button.done-button {
+    background-color: green;
+}
+
+
+#delete-all {
+    background-color: red;
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
+
+.todo-item .done-button {
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+    position: sticky; /* kiinnittyvä nappi */
+    left: 0; /* vasempaan reunaan */
+}
+
+.todo-item button.delete-button {
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#delete-all {
+    margin-top: 20px; /* pieni marginaali listan ja napin väliin */
+}
+
+@keyframes highlight {
+    0% { border-color: red; }
+    50% { border-color: transparent; }
+    100% { border-color: red; }
+}
+
+ul li:hover {
+    background: #222121; /* Taustan vari vaihtuu viemalla kursorin tehtavalistauksen paalle */
+  }
